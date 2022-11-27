@@ -1,0 +1,23 @@
+<br/>
+
+
+<div class="row">
+<div class="col-3 card"  *ngFor="let stu of data">
+    <img [src]="stu.PrinterImage"/>
+    <div class="card-body">
+      <h5 class="card-title"style="text-align:center;">{{stu.PrinterName}}</h5>
+      <p class="card-text" style="text-align:center;font-style:Comin Sans MS;">PrinterMaker:{{stu.PrinterMaker}}</p>
+    </div>
+    <ul class="list-group list-group-flush" style="text-align:center;">
+      <li class="list-group-item"><b>PrinterModel: {{stu.PrinterModel}}</b></li>
+      
+    </ul>
+    <div class="card-body" style="text-align:center;">
+      
+      <a routerLink="/printer/{{stu.id}}" class="card-link"><button type="button" class="btn btn-dark"><b><h5>View Profile -></h5></b></button></a>
+    
+      <a (click)="delete(stu.id)" class="card-link"><button type="button" class="btn btn-dark"><b><h5>Delete</h5></b></button></a>
+      
+    </div>
+  </div>
+</div>

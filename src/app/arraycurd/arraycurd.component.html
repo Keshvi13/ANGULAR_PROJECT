@@ -1,0 +1,44 @@
+<body>
+<br/>
+<br/>
+<br/>
+
+<form [formGroup]="myForm" (ngSubmit)="insert()">
+    <table >
+      <tr>
+        <td><b>ENTER NAME</b></td>
+        <td>:</td>
+        <td><input type="text" formControlName ="NAME"/></td>
+        <span *ngIf="myForm.controls.NAME.touched && myForm.controls.NAME.invalid"></span>
+  
+      </tr>
+      <tr>
+        <td><b> PASSWORD</b></td>
+        <td>:</td>
+        <td><input type="text" formControlName ="PASSWORD" /></td>
+      </tr>
+      <tr colspan="3">
+        <td *ngIf="idToEdit==-1"><button [disabled]="!myForm.valid"><b>INSERT</b></button></td>
+        <td *ngIf="idToEdit!=-1"><button><b>UPDATE</b>
+        </button></td>
+      </tr>
+    </table>
+  </form>
+<div class="abc"> 
+<table border="1" style="text-align: center;">
+  <tr>
+    <th>NAME</th>
+    <th>PASSWORD</th>
+    <th>DELETE</th>
+    <th>UPDATE</th>
+  </tr>
+  <tr *ngFor="let fac of faculties; let i=index">
+    <td>{{fac.NAME}}</td>
+    <td>{{fac.PASSWORD}}</td>
+    <td><button (click)="delete(i)">DELETE</button></td>
+    <td><button (click)="update(i)">UPDATE</button></td>
+  </tr>
+</table>
+</div>
+
+</body>

@@ -1,0 +1,36 @@
+<body>
+  <br/>
+  <h1 *ngIf="id==-1" value= "INSERT FORM">INSERT FORM</h1>
+  <h1 *ngIf="id>0" value= "UPDATE FORM">UPDATE FORM</h1>
+         
+<form [formGroup]="myForm" (ngSubmit)="insert()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">PrinterName</label>
+      <input type="name" class="form-control" formControlName="PrinterName" id="exampleInputEmail1" aria-describedby="emailHelp"/>
+      <div id="emailHelp" class="form-text">please enter your PrinterName frist letter must be capital </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label" >PrinterModel</label>
+      <input type="name" class="form-control" formControlName="PrinterModel" id="exampleInputPassword1"/>
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">PrinterMaker</label>
+        <input type="name" class="form-control" formControlName="PrinterMaker" id="exampleInputPassword1"/>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">PrinterImage</label>
+        <input type="name" class="form-control" formControlName="PrinterImage" id="exampleInputPassword1"/>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label" >PrinterDecription</label>
+        <input type="name" class="form-control"formControlName="PrinterDecription" id="exampleInputPassword1"/>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">PrinterPrice</label>
+        <input type="name" class="form-control"  formControlName="PrinterPrice" id="exampleInputPassword1"/>
+        <div id="emailHelp" class="form-text">must be enter digit </div>
+      </div>
+    <button type="submit" *ngIf="id==-1" value= "INSERT"class="btn btn-primary">INSERT</button>
+    <button  type="submit" *ngIf="id>0" value= "UPDATE"class="btn btn-primary">UPDATE</button>
+  </form>
+</body>

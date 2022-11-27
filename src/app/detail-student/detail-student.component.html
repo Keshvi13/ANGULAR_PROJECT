@@ -1,0 +1,23 @@
+<div class="card text-center" style="padding-top:70px; padding-left: 200px; padding-right: 200px; border: 1px;">
+    <div class="card-header">
+    <h2> <b> {{ data.PrinterModel}}</b>
+   </h2>
+
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{data.PrinterName}}</h5>
+      <p class="card-text"><b>DISCRIPTION:</b> {{data.PrinterDecription}}</p>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" routerLink="/printers" class="btn btn-dark">go somewhere</button>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <button type="button" routerLink="/printer/update/{{data.id}}" class="btn btn-dark">update</button>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+        <button (click)="delete()" type="button"  class="btn btn-dark">delete</button>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+      </div>
+    </div>
+    <div class="card-footer text-muted">
+     PRIZE: {{data.PrinterPrice}}
+    </div>
+  </div>
+

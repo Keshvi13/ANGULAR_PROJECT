@@ -1,0 +1,18 @@
+body{
+    background-image: url(https://wallpapercave.com/wp/wp4312409.jpg);
+    width: 1700px;
+    height: 90vh;
+    border-image-repeat: 0;
+}
+h4{
+    text-align: center;
+    color: rgb(177, 204, 227);
+    padding-top: 10px;
+    margin-right: 150px;
+}
+h1{
+    text-align: center;
+    color: rgb(177, 204, 227);
+    padding-top: 200px;
+    margin-right: 150px;
+}
